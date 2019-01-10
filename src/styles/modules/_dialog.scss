@@ -1,0 +1,127 @@
+.dialog-wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: #03030396;
+}
+.dialog {
+  width: 300px;
+  height: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%) translateY(-50%);
+  background: $color-0;
+  box-shadow: 0px 3px 30px 0;
+  border-radius: 4px;
+  .wrap-image {
+    width: 250px;
+    margin: 30px auto;
+    .image-product {
+      width: 100%;
+    }
+  }
+  .btn-confirm {
+    margin: 0 auto 25px;
+    display: block;
+  }
+}
+
+.dialog-form-wrap {
+  width: 100%;
+  height: 100%;
+  background: #03030396;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  .dialog-content {
+    width: 30%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    background: $color-0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .close-icon {
+      position: absolute;
+      right: 5px;
+      top: 10px;
+      cursor: pointer;
+    }
+    .title {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 7px;
+      padding: 20px;
+    }
+    .input {
+      width: 100%;
+      margin: 10px 0;
+    }
+    .error-message {
+      font-size: 13px;
+      color: $color-0;
+      background-color: rgb(223, 80, 80);
+      padding: 10px;
+      display: none;
+    }
+    .login-error {
+      font-size: 13px;
+      color: $color-0;
+      background-color: rgb(223, 80, 80);
+      padding: 10px;
+    }
+    .input.ng-invalid.ng-dirty + .error-message {
+      display: block;
+    }
+    // .input.ng-invalid.ng-touched + .error-message {
+    //   display: block;
+    // }
+    .btn-from {
+      margin: 20px 0;
+    }
+    .redirect-group {
+      padding: 20px 0 5px;
+    }
+    .link-redirect {
+      padding: 0 10px 20px 0;
+      display: inline-block;
+      font-size: 14px;
+      transition: all 200ms ease-in-out;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    .active {
+      &::after {
+        content: '';
+        margin-top: 2px;
+        border-top: solid 1px;
+        border-color: $primary-color;
+        display: block;
+      }
+    }
+  }
+}
+
+.notifi{
+  width: 300px;
+  background: #000000e6;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  border-radius: 4px;
+  .message {
+    padding: 20px;
+    color: $color-0;
+    font-size: 15px;
+  }
+}

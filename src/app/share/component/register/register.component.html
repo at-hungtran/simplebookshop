@@ -1,0 +1,27 @@
+<div *ngIf="isVisible" class="dialog-form-wrap">
+  <div class="dialog-content">
+    <span (click)="closeRegister()" class="close-icon"></span>
+    <h4 class="title">register</h4>
+    <div class="redirect-group">
+      <a class="link-redirect" (click)="openLogin()" href="javascript:void(0)">Log In</a>
+      <a class="link-redirect active" href="javascript:void(0)">Register</a>
+    </div>
+    <form [formGroup]="formRegister" (ngSubmit)="register(formRegister)">
+      <input class="input"type="text" formControlName="name" placeholder="Name">
+      <p class="error-message">{{nameValidate()}}</p>
+      <input class="input"type="text" formControlName="userName" placeholder="User Name">
+      <p class="error-message">{{userNameValidate()}}</p>
+      <input class="input" type="password" formControlName="password" placeholder="Password">
+      <p class="error-message">{{passwordValidate()}}</p>
+      <input class="input" type="password" formControlName="passwordCheck" placeholder="Password">
+      <p class="error-message">{{passwordCheckValidate()}}</p>
+      <input class="input" type="date" formControlName="birthday" placeholder="Birthday">
+      <p class="error-message">{{birthdayValidate()}}</p>
+      <input class="input" type="text" formControlName="address" placeholder="Address">
+      <p class="error-message">{{addressValidate()}}</p>
+      <input class="input" type="text" formControlName="phoneNumber" placeholder="Phone Number">
+      <p class="error-message">{{phoneNumberValidate()}}</p>
+      <button [disabled]="!formRegister.valid" class="btn btn-from" type="submit">register</button>
+    </form>
+  </div>
+</div>

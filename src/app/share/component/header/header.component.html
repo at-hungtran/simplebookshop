@@ -1,0 +1,37 @@
+<header class="page-header">
+  <div class="container">
+    <div class="wrap clearfix">
+      <h1 class="logo"><a routerLink="/home">books</a></h1>
+      <ul class="menu-list">
+        <li class="menu-item">
+          <div class="wrap-icon-shopping">
+            <a routerLink="/shopcart">
+              <span class="icon-shopping"></span>
+              <span *ngIf="count" class="count-product">{{count}}</span>
+            </a>
+          </div>
+        </li>
+        <li class="menu-item">
+          <div class="user-group">
+            <span class="icon-user"></span>
+            <ul class="dropdown-list">
+              <li *ngIf="!isUserLogin" (click)="openLoginForm()" class="dropdown-list-item">login</li>
+              <li *ngIf="!isUserLogin" (click)="openRegisteform()" class="dropdown-list-item">register</li>
+              <li *ngIf="isUserLogin" routerLink="/profile" class="dropdown-list-item">profile</li>
+              <li *ngIf="isUserLogin" (click)="logOut()" class="dropdown-list-item">log out</li>
+            </ul>
+          </div>
+        </li>
+        <li class="menu-item">
+          <div class="search-group">
+            <input type="checkbox" class="checkbox">
+            <input class="input-search" name="search" type="text" placeholder="Search">
+          </div>
+          <ul class="list-result-search">
+            <!-- <li *ngFor="let book of listBooks" class="item-serult-search">{{book.name}}</li> -->
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

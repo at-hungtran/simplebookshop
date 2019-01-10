@@ -1,0 +1,111 @@
+.btn {
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-remove {
+  width: 150px;
+  padding: 10px 0;
+  border: solid 1px;
+  border-radius: 5px;
+  border-color: $primary-color;
+  color: $primary-color;
+  font-size: 13px; 
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 200ms ease-in-out;
+  &:hover {
+    background: $primary-color;
+    color: $color-0;
+  }
+}
+
+.btn-total {
+  width: 200px;
+  height: 50px;
+  background: $secondary-color;
+  border: none;
+  border-radius: 4px;
+  color: $color-0;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: all 200ms ease-in-out;
+  &:hover {
+    background: $secondary-color-hover;
+  }
+}
+.btn-back {
+  width: 250px;
+  height: 60px;
+  padding: 0 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 17px;
+  color: $color-0;
+  background: $secondary-color;
+  transition: all 200ms ease-in-out;
+  &::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background: url('assets/images/back.png') no-repeat;
+    padding-right: 18px;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+  &:hover {
+    background: $secondary-color-hover;
+    &::before {
+      animation: arow 500ms ease-in-out 0s infinite alternate;
+    }
+  }
+
+  @keyframes arow {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-10px);
+    }
+  }
+}
+
+.btn-from {
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+  background: $primary-color;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  color: $color-0;
+  letter-spacing: 5px;
+  transition: all 200ms ease-in-out;
+  &:hover {
+    background: $primary-color-horver;
+  }
+  &:disabled {
+    background: #f8e182;
+    cursor: no-drop;
+  }
+}
+
+.btn-confirm {
+  width: 160px;
+  padding: 15px 0;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: solid 1px;
+  border-radius: 4px;
+  border-color: $primary-color;
+  color: $primary-color;
+  transition: all 200ms ease-in-out;
+  &:hover {
+    background: $primary-color;
+    color: $color-0;
+  }
+}

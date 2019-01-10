@@ -1,0 +1,44 @@
+<main class="page-main">
+  <section class="section-shop-cart">
+    <div class="container">
+      <div *ngIf="!totalPrice" class="empty-cart">
+        <h4 class="message">Chưa Có Sản Phẩn Nào</h4>
+        <button routerLink="/home" class="btn btn-back">Tiếp Tục Mua Sắm</button>
+      </div>
+      <div *ngIf="totalPrice" class="wrap-content">
+        <h4 class="title">Giỏ Hàng</h4>
+        <ul class="cart-list clearfix">
+            <li *ngFor="let product of productsShopCart; let i = index" class="cart-item">
+              <div class="cart-item-border">
+                <ul class="cart-item-info-list">
+                  <li class="info-item col-sm-4">
+                    <div class="image-product-wrap">
+                      <img class="image-product" src="{{product.image | fetchUrl}}" alt="product">
+                    </div>
+                  </li>
+                  <li class="info-item col-sm-4">
+                    <div class="product-info">
+                      <span class="product-name">{{product.name}}</span>
+                      <p class="product-price">{{product.price | converPrice}}</p>
+                    </div>
+                  </li>
+                  <li class="info-item col-sm-4">
+                    <span class="product-amount">Số Lượng: {{product.amount}}</span>
+                  </li>
+                  <li class="info-item col-sm-4">
+                    <button (click)="removeItem(i)" class="btn btn-remove">hủy</button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        <div class="container-right">
+          <div class="group-total">
+              <p class="sum-price">Tổng Tiền: {{totalPrice | converPrice}}</p>
+              <button (click)="payAll()" class="btn btn-total">Thanh Toán</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

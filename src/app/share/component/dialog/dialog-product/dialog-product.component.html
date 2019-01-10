@@ -1,0 +1,9 @@
+<div *ngIf="visible" class="dialog-wrap">
+  <div class="dialog">
+    <div class="wrap-image">
+      <img class="image-product" src="{{imageUrl}}" alt="product">
+    </div>
+    <button (click)="closeDialog()" class="btn btn-confirm">ok</button>
+  </div>
+</div>
+<div *ngIf="visible" class="overlay" (click)="closeDialog()"></div>

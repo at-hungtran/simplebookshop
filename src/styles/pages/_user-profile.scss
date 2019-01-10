@@ -1,0 +1,36 @@
+.section-profile {
+  padding: 150px 200px;
+  .title {
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .head-content {
+    float: left;
+    .border-avatar {
+      width: 150px;
+      .avatar {
+        width: 100%;
+      }
+    }
+  }
+  .bottom-content {
+    float: left;
+    padding: 0 200px;
+    .list-info {
+      line-height: 30px
+    }
+    .list-info-item {
+      .label {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .info {
+        padding-left: 10px;
+        font-size: 15px;
+      }
+    }
+  }
+}
